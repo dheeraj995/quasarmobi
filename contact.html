@@ -1,0 +1,235 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]>
+<!--><html class="no-js" lang="en"><!--<![endif]-->
+
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>QUASARMOBI</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	
+	
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="css/base.css"/>
+	<link rel="stylesheet" href="css/skeleton.css"/>
+	<link rel="stylesheet" href="css/layout.css"/>
+	<link rel="stylesheet" href="css/font-awesome.css" />
+	<link rel="stylesheet" href="css/retina.css"/>
+	<link rel="stylesheet" href="css/animsition.min.css"/>
+	
+
+		
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="favicon.png">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+	
+	
+	
+</head>
+<body>
+
+	<div class="animsition">	
+	
+	<!-- MENU
+    ================================================== -->	
+
+	
+		<div id="menu-wrap" class="menu-back cbp-af-header">
+			<div class="container">
+				<div class="sixteen columns">
+					<a href="index.html">
+					<div class="logo"></div></a>
+					<ul class="slimmenu">
+						<li><a class="active-menu" href="index.html">Home</a></li>
+						
+					</ul>
+				</div>
+			</div>
+		</div>	
+		
+	<!-- Primary Page Layout
+	================================================== -->
+
+ <!-- .cd-section --> 
+
+	<section class="section white-background padding-top-bottom shadow-sec" id="scroll-link">
+		<div class="container">
+			<div class="sixteen columns">
+				<div class="section-header-text">
+					<h4>Get in touch<span>.</span></h4>
+					<div class="line-header"></div>
+				</div>
+			</div>
+				
+				<div class="clear"></div>
+					
+				<form name="ajax-form" id="ajax-form" action="form.php" method="post" onsubmit="return validation()";>
+					<div class="eight columns" data-scroll-reveal="enter bottom move 100px over 0.6s after 0.2s">
+						<label for="name"> 
+							<span class="error" id="err-name">please enter name</span>
+						</label>
+						<input name="name" id="name" type="text" placeholder="Your Name: *"/>
+					</div>
+					<div class="eight columns" data-scroll-reveal="enter bottom move 100px over 0.6s after 0.2s">
+						<label for="email"> 
+							<span class="error" id="err-email">please enter e-mail</span>
+							<span class="error" id="err-emailvld">e-mail is not a valid format</span>
+						</label>
+						<input name="email" id="email" type="text"  placeholder="E-Mail: *"/>
+					</div>
+					<div class="sixteen columns" data-scroll-reveal="enter bottom move 100px over 0.6s after 0.2s">
+						<label for="message"></label>
+						<textarea name="message" id="message" placeholder="Message"></textarea>
+					</div>
+					<div class="sixteen columns" data-scroll-reveal="enter bottom move 100px over 0.6s after 0.2s">
+						<div id="button-con"><button class="send_message" id="send"><span data-hover="submit">submit</span></button></div>					
+					</div>
+					<div class="clear"></div>	
+					<div class="error text-align-center" id="err-form">There was a problem validating the form please check!</div>
+					<div class="error text-align-center" id="err-timedout">The connection to the server timed out!</div>
+					<div class="error" id="err-state"></div>
+				</form>	
+					
+				<div class="clear"></div>
+				<div id="ajaxsuccess">Successfully sent!!</div>
+				<div class="clear"></div>
+					
+		</div>
+	</section>
+
+	<section class="section white-background padding-bottom hidden-sec">
+		<div class="container">
+			<div class="one-third column">
+				<div class="contact-details">
+					<p><span>&#xf1d8;</span> Email:</p> 
+					<h6>support@quasarmobi.com</h6>
+				</div>
+			</div>
+			<div class="one-third column">
+				<div class="contact-details">
+					<p><span>&#xf08c;</span> Skype:</p>
+					<h6>QuasarMobi</h6>
+				</div>
+			</div>
+			<div class="one-third column">
+				<div class="contact-details">
+					<p><span>&#xf041;</span> Address:</p>
+					<h6>Noida, India</h6>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<footer class="footer no-shadow">
+		<div class="container">
+			<div class="sixteen columns">
+				<div class="footer-social">
+					<a href="#">Skype</a>
+					<a href="#">linkedin</a>
+					<a href="#">facebook</a>
+					<a href="privacy.html">Privacy Policy </a>
+				</div> 
+			</div>
+		</div>
+		<div class="container">
+			<div class="sixteen columns">
+				<div class="footer-copy-text">
+					<p>© QUASARMOBI. All rights reserved. 2017</p>
+					
+				</div>
+			</div>
+		</div>
+	</footer> 	
+		
+	</div>	
+
+		
+	<!-- JAVASCRIPT
+    ================================================== -->
+<script type="text/javascript" src="js/jquery.js"></script>	
+<script type="text/javascript" src="js/modernizr.custom.js"></script> 
+<script type="text/javascript" src="js/jquery.animsition.min.js"></script>
+<script type="text/javascript">
+
+	function validation()                
+            { 
+            var name = document.forms[ajax-form]["name"];
+            var message = document.forms[ajax-form]["message"];
+            var email = document.forms[ajax-form]["email"];
+        
+            if (name.value == "")                
+            { 
+              window.alert("Please enter your name."); 
+              name.focus(); 
+              return false; 
+            }
+
+            if (email.value == "")             
+            { 
+              window.alert("Please enter your E-mail Id."); 
+              email.focus(); 
+              return false; 
+            } 
+    
+            if (message.value == "")           
+            { 
+              window.alert("Please enter your Message"); 
+              message.focus(); 
+              return false; 
+            } 
+            return true; 
+            }
+
+(function($) { "use strict";
+	$(document).ready(function() {
+	  
+	  $(".animsition").animsition({
+	  
+		inClass               :   'zoom-in-sm',
+		outClass              :   'zoom-out-sm',
+		inDuration            :    800,
+		outDuration           :    800,
+		linkElement           :   '.animsition-link', 
+		// e.g. linkElement   :   'a:not([target="_blank"]):not([href^=#])'
+		loading               :    true,
+		loadingParentElement  :   'body', //animsition wrapper element
+		loadingClass          :   'animsition-loading',
+		unSupportCss          : [ 'animation-duration',
+								  '-webkit-animation-duration',
+								  '-o-animation-duration'
+								],
+		//"unSupportCss" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser. 
+		//The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+		
+		overlay               :   false,
+		
+		overlayClass          :   'animsition-overlay-slide',
+		overlayParentElement  :   'body'
+	  });
+	});  
+})(jQuery);
+</script>
+<script type="text/javascript" src="js/jquery.easing.js"></script>
+<script type="text/javascript" src="js/retina-1.1.0.min.js"></script>
+<script type="text/javascript" src="js/classie.js"></script>
+<script type="text/javascript" src="js/cbpAnimatedHeader.min.js"></script>
+<script type="text/javascript" src="js/menu.js"></script> 	
+<script type="text/javascript" src="js/scroll.js"></script>  
+<!-- End Document
+================================================== -->
+</body>
+
+</html>
